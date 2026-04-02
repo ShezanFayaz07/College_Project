@@ -1,1 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 @import "tailwindcss";
+
+:root {
+  --background: #f4f0e6;
+  --foreground: #1c2321;
+  --primary: #c2912e;
+  --primary-hover: #a17825;
+  --primary-foreground: #ffffff;
+  --card: #ede8dc;
+  --card-foreground: #1c2321;
+  --muted: #e5dfd1;
+  --muted-foreground: #666e6b;
+  --border: #dfd8c9;
+}
+
+.dark {
+  --background: #0d1511;
+  --foreground: #f2ebd9;
+  --primary: #c69b35;
+  --primary-hover: #daa834;
+  --primary-foreground: #0d1511;
+  --card: #15221c;
+  --card-foreground: #f2ebd9;
+  --muted: #1a2a22;
+  --muted-foreground: #8a9c94;
+  --border: #1f3329;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
