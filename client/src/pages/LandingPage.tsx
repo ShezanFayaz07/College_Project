@@ -1,4 +1,4 @@
-import BottomCTA from "../components/landing/BottomCta";
+import BottomCTA from "../components/landing/BottomCTA";
 import FeatureCards from "../components/landing/FeatureCards";
 import HeroSection from "../components/landing/HeroSection";
 import HowItWorks from "../components/landing/HowItWorks";

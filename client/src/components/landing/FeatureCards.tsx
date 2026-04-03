@@ -34,8 +34,8 @@ export default function FeatureCards() {
                         <Edit3 className="text-primary w-4 h-4" />
                     </div>
                     <div className="mt-auto">
-                        <h3 className="text-xl md:text-2xl font-serif font-bold text-foreground mb-4">The Scribe's Editor</h3>
-                        <p className="text-[13px] md:text-sm text-muted-foreground leading-relaxed">Refine, adjust, and polish every generated question with a seamless editorial interface built for scholars.</p>
+                        <h3 className="text-xl md:text-2xl font-serif font-bold text-foreground mb-4">The Quiz Editor</h3>
+                        <p className="text-[13px] md:text-sm text-muted-foreground leading-relaxed">Review, edit, and improve each generated question with an easy interface designed for students.</p>
                     </div>
 
                 </div>
@@ -46,7 +46,7 @@ export default function FeatureCards() {
                         <LinkIcon className="text-primary w-4 h-4" />
                     </div>
                     <div className="mt-auto">
-                        <h3 className="text-xl md:text-2xl font-serif font-bold text-foreground mb-4">Instant Dissemination</h3>
+                        <h3 className="text-xl md:text-2xl font-serif font-bold text-foreground mb-4">Instant Sharing</h3>
                         <p className="text-[13px] md:text-sm text-muted-foreground leading-relaxed">Distribute your quizzes with a single secure link or embed them directly into your existing digital archives.</p>
                     </div>
                 </div>

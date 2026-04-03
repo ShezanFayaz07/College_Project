@@ -30,7 +30,7 @@ export default function HowItWorks() {
       {/* Section heading */}
       <div className="text-center space-y-4">
         <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">The Path to Enlightenment</h2>
-        <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-widest">Four simple steps from raw data to a bespoke educational manuscript.</p>
+        <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-widest">Four simple steps from your content to a customized educational quiz.</p>
       </div>
       
       {/* Step cards */}
