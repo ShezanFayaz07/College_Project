@@ -75,7 +75,7 @@ export default function QuizViewPage() {
 
                 </div>
 
-            </main> 
+            </main>
 
 
 
@@ -91,7 +91,7 @@ export default function QuizViewPage() {
                     <ArrowRight size={16} />
                 </button>
 
-            </footer> 
+            </footer>
 
 
 
