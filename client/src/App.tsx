@@ -3,6 +3,7 @@ import LandingPage from "./pages/LandingPage"
 import { Routes, Route } from "react-router-dom"
 import QuizViewPage from "./pages/QuizViewPage"
 import ResultPage from "./pages/ResultPage"
+import ShareLinkPage from "./pages/ShareLinkPage"
 
 
 
@@ -17,6 +18,7 @@ function App() {
 
         <Route path="/quiz/:id" element={<QuizViewPage />} />
         <Route path="/quiz/:id/results" element={<ResultPage />} />
+        <Route path="/share/:id" element={<ShareLinkPage />} />
       </Routes>
     </>
   )
