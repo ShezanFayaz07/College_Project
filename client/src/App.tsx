@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom"
 import QuizViewPage from "./pages/QuizViewPage"
 import ResultPage from "./pages/ResultPage"
 import ShareLinkPage from "./pages/ShareLinkPage"
+import TermsPage from "./pages/TermsPage"
+import PrivacyPage from "./pages/PrivacyPage"
 
 
 
@@ -19,6 +21,10 @@ function App() {
         <Route path="/quiz/:id" element={<QuizViewPage />} />
         <Route path="/quiz/:id/results" element={<ResultPage />} />
         <Route path="/share/:id" element={<ShareLinkPage />} />
+
+
+        <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/terms" element={<TermsPage />} />
       </Routes>
     </>
   )
