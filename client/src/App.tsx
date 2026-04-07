@@ -6,6 +6,7 @@ import ResultPage from "./pages/ResultPage"
 import ShareLinkPage from "./pages/ShareLinkPage"
 import TermsPage from "./pages/TermsPage"
 import PrivacyPage from "./pages/PrivacyPage"
+import StatsPage from "./pages/StatsPage"
 
 
 
@@ -23,8 +24,10 @@ function App() {
         <Route path="/share/:id" element={<ShareLinkPage />} />
 
 
+
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />
+        <Route path="/stats/:id" element={<StatsPage />} />
       </Routes>
     </>
   )
