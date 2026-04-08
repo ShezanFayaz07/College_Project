@@ -7,6 +7,7 @@ import ShareLinkPage from "./pages/ShareLinkPage"
 import TermsPage from "./pages/TermsPage"
 import PrivacyPage from "./pages/PrivacyPage"
 import StatsPage from "./pages/StatsPage"
+import DashboardPage from "./pages/DashboardPage"
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/register" element={<AuthPage />} />
         <Route path="/login" element={<AuthPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
 
         <Route path="/quiz/:id" element={<QuizViewPage />} />
         <Route path="/quiz/:id/results" element={<ResultPage />} />
