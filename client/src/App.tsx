@@ -8,6 +8,7 @@ import TermsPage from "./pages/TermsPage"
 import PrivacyPage from "./pages/PrivacyPage"
 import StatsPage from "./pages/StatsPage"
 import DashboardPage from "./pages/DashboardPage"
+import QuizConfigPage from "./pages/QuizConfigPage"
 
 
 
@@ -24,6 +25,8 @@ function App() {
         <Route path="/quiz/:id" element={<QuizViewPage />} />
         <Route path="/quiz/:id/results" element={<ResultPage />} />
         <Route path="/share/:id" element={<ShareLinkPage />} />
+
+        <Route path="/config" element={<QuizConfigPage/>}/>
 
 
 
