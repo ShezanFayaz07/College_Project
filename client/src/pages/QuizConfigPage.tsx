@@ -195,17 +195,20 @@ export default function QuizConfigPage() {
             </div>
 
             {/* Controls */}
-      <div className="fixed bottom-0 right-0 p-6 z-20 w-full bg-[#0D1511]/90 backdrop-blur-md border-t border-[#1f3329] flex items-center justify-between px-6 md:px-12">
-        <Link to="/create/edit" className="flex items-center gap-2 text-[#8A9C94] hover:text-[#F2EBD9] transition-all text-[11px] font-bold uppercase tracking-widest group">
-          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-          Back to Editor
+      <div className="fixed bottom-0 right-0 z-20 w-full bg-[#0D1511]/90 backdrop-blur-md border-t border-[#1f3329] flex items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4 md:px-12 md:py-5">
+        <Link to="/create/edit" className="flex items-center gap-1.5 sm:gap-2 text-[#8A9C94] hover:text-[#F2EBD9] transition-all text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.08em] sm:tracking-widest group shrink-0">
+          <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform sm:w-4 sm:h-4" />
+          <span className="hidden xs:inline">Back to </span>Editor
         </Link>
         <Link
           to="/create/share"
-          className="flex items-center gap-3 bg-[#B28228] hover:bg-[#C69B35] text-[#0D1511] text-[11px] font-bold uppercase tracking-[0.15em] px-10 py-4 rounded-sm transition-all shadow-lg active:scale-95"
+          className="flex items-center gap-2 bg-[#B28228] hover:bg-[#C69B35] text-[#0D1511] font-bold uppercase rounded-sm transition-all shadow-lg active:scale-95 whitespace-nowrap
+            text-[9px] tracking-[0.06em] px-3.5 py-2.5
+            sm:text-[10px] sm:tracking-widest sm:px-6 sm:py-3
+            md:text-[11px] md:tracking-[0.15em] md:px-8 md:py-3.5"
         >
           Publish Manuscript
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="sm:w-4 sm:h-4 md:w-4.5 md:h-4.5"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
         </Link>
       </div>
         </div>
