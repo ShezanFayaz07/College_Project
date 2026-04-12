@@ -30,7 +30,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
                             "Beautiful quiz themes tailored for focus"
                         ].map((feature, idx) => (
                             <li key={idx} className="flex items-center gap-4 text-sm text-[#8A9C94] font-medium">
-                                <CheckCircle2 size={18} className="text-[#A17825] flex-shrink-0" />
+                                <CheckCircle2 size={18} className="text-[#A17825] shrink-0" />
                                 {feature}
                             </li>
                         ))}

@@ -86,7 +86,7 @@ export default function StatsPage() {
                                         <td className="p-5 text-[#C69B35] font-serif font-bold text-lg">{sub.score}</td>
                                         <td className="p-5 text-[#8A9C94]">{sub.time}</td>
                                         <td className="p-5">
-                                            <span className={`px-2 py-1 rounded-[3px] text-[9px] font-bold tracking-[0.1em] uppercase ${sub.status === 'Passed' ? 'bg-[#3bb97e]/10 text-[#3bb97e] border border-[#3bb97e]/20' : 'bg-[#e57a7a]/10 text-[#e57a7a] border border-[#e57a7a]/20'
+                                            <span className={`px-2 py-1 rounded-[3px] text-[9px] font-bold tracking-widest uppercase ${sub.status === 'Passed' ? 'bg-[#3bb97e]/10 text-[#3bb97e] border border-[#3bb97e]/20' : 'bg-[#e57a7a]/10 text-[#e57a7a] border border-[#e57a7a]/20'
                                                 }`}>
                                                 {sub.status}
                                             </span>

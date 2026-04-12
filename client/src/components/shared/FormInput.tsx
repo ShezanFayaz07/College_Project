@@ -18,7 +18,7 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
         return (
  <div className="flex flex-col gap-2 w-full">
         <div className="flex justify-between items-end">
-          <label className="text-[10px] font-bold text-[#6D716A] uppercase tracking-[0.1em]">{label}</label>
+          <label className="text-[10px] font-bold text-[#6D716A] uppercase tracking-widest">{label}</label>
           {rightLabel && (
             <div className="text-[10px] font-bold text-primary hover:text-primary-hover transition-colors cursor-pointer">
               {rightLabel}

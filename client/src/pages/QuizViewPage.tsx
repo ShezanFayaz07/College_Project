@@ -31,7 +31,7 @@ export default function QuizViewPage() {
             Question 5 of 12
           </span>
 
-          <div className="w-20 sm:w-24 h-[2px] bg-[#1f3329] rounded-full overflow-hidden">
+          <div className="w-20 sm:w-24 h-0.5 bg-[#1f3329] rounded-full overflow-hidden">
             <div className="w-5/12 h-full bg-[#C69B35]" />
           </div>
         </div>

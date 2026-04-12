@@ -29,12 +29,12 @@ export default function HeroSection() {
           • Desktop → static 3D tilt via .hero-card in index.css (no animation)
       -->*/}
       <div
-        className="flex-1 w-full max-w-[300px] sm:max-w-sm md:max-w-md lg:max-w-xl xl:max-w-2xl relative mx-auto lg:mx-0"
+        className="flex-1 w-full max-w-75 sm:max-w-sm md:max-w-md lg:max-w-xl xl:max-w-2xl relative mx-auto lg:mx-0"
         style={{ perspective: '1000px' }}
       >
-        <div className="hero-card relative w-full aspect-[4/3] bg-background border border-border shadow-2xl rounded-sm p-5 sm:p-8">
+        <div className="hero-card relative w-full aspect-4/3 bg-background border border-border shadow-2xl rounded-sm p-5 sm:p-8">
           {/* Glow */}
-          <div className="absolute -inset-1 bg-gradient-to-tr from-primary/5 to-transparent blur-2xl -z-10 rounded-sm" />
+          <div className="absolute -inset-1 bg-linear-to-tr from-primary/5 to-transparent blur-2xl -z-10 rounded-sm" />
 
           <div className="flex flex-col gap-4 sm:gap-5 w-full h-full opacity-80">
             {/* Mock header lines */}

@@ -59,13 +59,13 @@ export default function RegisterForm() {
 
             <div className="relative flex items-center py-4">
 
-                <div className="flex-grow border-t border-[#dfd8c9]" />
+                <div className="grow border-t border-[#dfd8c9]" />
 
                 <span className="mx-4 text-xs tracking-widest uppercase text-[#A19D92] font-semibold italic">
                     or
                 </span>
 
-                <div className="flex-grow border-t border-[#dfd8c9]" />
+                <div className="grow border-t border-[#dfd8c9]" />
 
             </div>
 

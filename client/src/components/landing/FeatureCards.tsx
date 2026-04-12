@@ -13,7 +13,7 @@ export default function FeatureCards() {
                 <div className="flex flex-col gap-2">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">Intentional Intelligence</h2>
                 </div>
-                <div className="mt-8 overflow-hidden rounded-md border border-border relative aspect-[16/10] bg-background/50 flex items-center justify-center">
+                <div className="mt-8 overflow-hidden rounded-md border border-border relative aspect-16/10 bg-background/50 flex items-center justify-center">
                     <img
                         src="/pen_and_book.png"
                         alt="Antique fountain pen on leather manuscript"

@@ -37,7 +37,7 @@ export default function DashboardPage() {
                         <p className="text-[#8A9C94] text-sm md:text-base">Manage and distribute your generated quiz collections.</p>
                     </div>
 
-                    <Link to="/create/upload" className="flex items-center gap-2 bg-[#B28228] hover:bg-[#976E22] text-[#0D1511] text-[11px] font-bold uppercase tracking-[0.1em] px-6 py-3.5 rounded-[3px] transition-colors shadow-lg">
+                    <Link to="/create/upload" className="flex items-center gap-2 bg-[#B28228] hover:bg-[#976E22] text-[#0D1511] text-[11px] font-bold uppercase tracking-widest px-6 py-3.5 rounded-[3px] transition-colors shadow-lg">
                         <Plus size={16} strokeWidth={3} />
                         Create New Quiz
                     </Link>

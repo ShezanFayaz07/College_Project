@@ -21,7 +21,7 @@ export default function OptionsCard({ letter, text, isSelected, onClick }: Optio
 
 
             {isSelected && (
-                <div className="absolute inset-0 bg-gradient-to-r from-[#C69B35]/10 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-linear-to-r from-[#C69B35]/10 to-transparent pointer-events-none" />
             )}
 
 

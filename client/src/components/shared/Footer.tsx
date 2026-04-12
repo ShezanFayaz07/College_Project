@@ -8,13 +8,13 @@ export default function Footer() {
         <div className="flex items-center gap-2 text-foreground font-serif tracking-tight">
           <span className="text-xl font-bold">Quizly</span>
         </div>
-        <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-[0.1em]">
+        <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest">
           © 2026 QUIZLY. THE DIGITAL SCRIBE.
         </p>
       </div>
 
       {/* Footer navigation */}
-      <div className="flex flex-wrap items-center justify-center gap-8 text-[10px] text-muted-foreground font-bold uppercase tracking-[0.1em]">
+      <div className="flex flex-wrap items-center justify-center gap-8 text-[10px] text-muted-foreground font-bold uppercase tracking-widest">
         <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
         <Link to="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
         <Link to="/contact" className="hover:text-foreground transition-colors">Contact Us</Link>

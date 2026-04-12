@@ -31,7 +31,7 @@ export default function QuizConfigPage() {
 
                 <div className="w-full bg-[#111C16]/40 backdrop-blur-sm border border-[#1f3329] rounded-xl p-8 shadow-xl transition-all duration-300">
                     <h2 className="text-lg font-serif italic text-[#F2EBD9] mb-8 flex items-center gap-2">
-                        <span className="w-6 h-[1px] bg-[#C69B35]"></span>
+                        <span className="w-6 h-px bg-[#C69B35]"></span>
                         Visual Theme
                     </h2>
                     <div className="flex flex-col md:flex-row items-center gap-6 justify-between">
@@ -42,7 +42,7 @@ export default function QuizConfigPage() {
                                 className="flex flex-col items-center gap-4 w-full cursor-pointer group"
                             >
                                 <div
-                                    className={`w-full h-[120px] rounded-xl border-2 transition-all duration-300 relative overflow-hidden flex items-center justify-center
+                                    className={`w-full h-30 rounded-xl border-2 transition-all duration-300 relative overflow-hidden flex items-center justify-center
                                     ${selectedTheme === theme.id
                                             ? "border-[#C69B35] shadow-[0_0_15px_rgba(198,155,53,0.15)] scale-[1.02]"
                                             : "border-[#1f3329] opacity-30 hover:opacity-60"}`}
@@ -96,7 +96,7 @@ export default function QuizConfigPage() {
                         </button>
                     </div>
 
-                    <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isTimerEnabled ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0 invisible"}`}>
+                    <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isTimerEnabled ? "max-h-75 opacity-100" : "max-h-0 opacity-0 invisible"}`}>
                         <div className="flex flex-col md:flex-row items-center gap-8 bg-[#0D1511]/60 p-6 rounded-xl border border-[#1f3329]">
                             <div className="flex items-center gap-4">
                                 <div className={`p-3 rounded-lg border transition-colors ${isTimerEnabled ? "bg-[#111C16] border-[#C69B35]/50 text-[#C69B35]" : "bg-[#111C16] border-[#1f3329] text-[#8A9C94]"}`}>
@@ -178,7 +178,7 @@ export default function QuizConfigPage() {
                 {/* Identification */}
                 <div className="w-full bg-[#111C16]/40 backdrop-blur-sm border border-[#1f3329] rounded-xl p-8 shadow-xl transition-all duration-300">
                     <h2 className="text-lg font-serif italic text-[#F2EBD9] mb-8 flex items-center gap-2">
-                        <span className="w-6 h-[1px] bg-[#C69B35]"></span>
+                        <span className="w-6 h-px bg-[#C69B35]"></span>
                         Manuscript Details
                     </h2>
 
@@ -195,19 +195,19 @@ export default function QuizConfigPage() {
             </div>
 
             {/* Controls */}
-            <div className="fixed bottom-0 right-0 p-6 z-20 w-full bg-[#0D1511]/90 backdrop-blur-md border-t border-[#1f3329] flex items-center justify-between px-6 md:px-12">
-                <Link to="/create/edit" className="flex items-center gap-2 text-[#8A9C94] hover:text-[#F2EBD9] transition-all text-[11px] font-bold uppercase tracking-[0.1em] group">
-                    <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-                    Back to Editor
-                </Link>
-                <Link
-                    to="/create/share"
-                    className="flex items-center gap-3 bg-[#B28228] hover:bg-[#C69B35] text-[#0D1511] text-[11px] font-bold uppercase tracking-[0.15em] px-10 py-4 rounded-[4px] transition-all shadow-lg active:scale-95"
-                >
-                    Publish Manuscript
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-                </Link>
-            </div>
+      <div className="fixed bottom-0 right-0 p-6 z-20 w-full bg-[#0D1511]/90 backdrop-blur-md border-t border-[#1f3329] flex items-center justify-between px-6 md:px-12">
+        <Link to="/create/edit" className="flex items-center gap-2 text-[#8A9C94] hover:text-[#F2EBD9] transition-all text-[11px] font-bold uppercase tracking-widest group">
+          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+          Back to Editor
+        </Link>
+        <Link
+          to="/create/share"
+          className="flex items-center gap-3 bg-[#B28228] hover:bg-[#C69B35] text-[#0D1511] text-[11px] font-bold uppercase tracking-[0.15em] px-10 py-4 rounded-sm transition-all shadow-lg active:scale-95"
+        >
+          Publish Manuscript
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+        </Link>
+      </div>
         </div>
 
     )
