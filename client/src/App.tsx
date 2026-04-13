@@ -9,6 +9,7 @@ import PrivacyPage from "./pages/PrivacyPage"
 import StatsPage from "./pages/StatsPage"
 import DashboardPage from "./pages/DashboardPage"
 import QuizConfigPage from "./pages/QuizConfigPage"
+import QuizEditPage from "./pages/QuizEditPage"
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/share/:id" element={<ShareLinkPage />} />
 
         <Route path="/config" element={<QuizConfigPage/>}/>
+        <Route path="/edit" element={<QuizEditPage />} />
 
 
 
