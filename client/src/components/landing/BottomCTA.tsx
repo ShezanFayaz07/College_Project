@@ -4,7 +4,7 @@ export default function BottomCTA() {
   return (
     <section className="w-full px-6 md:px-12 py-12 max-w-6xl mx-auto mb-16">
       {/* Final call-to-action banner */}
-      <div className="w-full bg-[#1c2321] dark:bg-[#15221c] text-[#f4f0e6] rounded-3xl p-12 md:p-24 flex flex-col items-center text-center gap-8 relative overflow-hidden shadow-2xl">
+      <div className="w-full bg-[#1c2321] dark:bg-muted text-[#f4f0e6] rounded-3xl p-12 md:p-24 flex flex-col items-center text-center gap-8 relative overflow-hidden shadow-2xl">
         <div className="absolute inset-0 opacity-10 blur-3xl bg-primary pointer-events-none"></div>
         
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold max-w-3xl leading-[1.1] z-10 text-white dark:text-[#f4f0e6]">
