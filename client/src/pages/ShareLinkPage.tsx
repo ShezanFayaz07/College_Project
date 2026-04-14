@@ -5,15 +5,15 @@ import ShareModal from "../components/quiz/ShareModal";
 
 export default function ShareLinkPage() {
     return (
-        <div className="min-h-screen bg-[#0D1511] flex flex-col font-sans">
+        <div className="min-h-screen bg-background flex flex-col font-sans">
 
-            <header className="w-full px-6 md:px-12 py-6 flex items-center justify-between bg-[#0D1511] z-10 sticky top-0 border-b border-[#1f3329]">
+            <header className="w-full px-6 md:px-12 py-6 flex items-center justify-between bg-background z-10 sticky top-0 border-b border-border">
                 <Link to="/" className="flex items-center gap-3 font-serif hover:opacity-80 transition-opacity">
-                    <BookOpen className="text-[#C69B35]" size={24} opacity={0.8} />
-                    <span className="text-xl font-bold italic text-[#F2EBD9] opacity-90">Quizly</span>
+                    <BookOpen className="text-primary" size={24} opacity={0.8} />
+                    <span className="text-xl font-bold italic text-foreground opacity-90">Quizly</span>
                 </Link>
 
-                <div className="flex items-center justify-center w-10 h-10 rounded-full border border-[#1f3329] bg-[#111C16] text-[#C69B35] cursor-pointer hover:bg-[#15221c] transition-colors">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full border border-border bg-card text-primary cursor-pointer hover:bg-muted transition-colors">
                     <User size={18} />
                 </div>
             </header>
