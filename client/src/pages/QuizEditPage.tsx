@@ -49,22 +49,22 @@ export default function QuizEditPage() {
 
 
             {/* ── DESKTOP SIDEBAR ── */}
-            <aside className="hidden lg:flex w-87.5 bg-[#0D1511] border-r border-[#1f3329] flex-col min-h-[calc(100vh-89px)] shrink-0">
+            <aside className="hidden lg:flex w-87.5 bg-background border-r border-border flex-col min-h-[calc(100vh-89px)] shrink-0">
                 <div className="p-8 sticky top-0 pb-44 overflow-y-auto max-h-screen scrollbar-hide">
-                    <h2 className="text-2xl font-serif font-bold italic text-[#F2EBD9] mb-10">Quiz 101</h2>
+                    <h2 className="text-2xl font-serif font-bold italic text-foreground mb-10">Quiz 101</h2>
 
                     <nav className="flex flex-col gap-2">
                         {questions.map((q) => (
                             <div
                                 key={q.id}
                                 onClick={() => setActiveQuestion(q.id)}
-                                className={`p-5 rounded-lg cursor-pointer transition-colors ${activeQuestion === q.id ? 'bg-[#111C16] border-l-2 border-[#C69B35]' : 'hover:bg-[#111C16] border-l-2 border-transparent'}`}
+                                className={`p-5 rounded-lg cursor-pointer transition-colors ${activeQuestion === q.id ? 'bg-card border-l-2 border-primary' : 'hover:bg-card border-l-2 border-transparent'}`}
                             >
                                 <div className="flex items-start gap-4">
-                                    <span className={`font-serif italic font-bold text-lg mt-0.5 ${activeQuestion === q.id ? 'text-[#C69B35]' : 'text-[#8A9C94]'}`}>
+                                    <span className={`font-serif italic font-bold text-lg mt-0.5 ${activeQuestion === q.id ? 'text-primary' : 'text-muted-foreground'}`}>
                                         {q.number}
                                     </span>
-                                    <p className={`text-[13px] leading-relaxed ${activeQuestion === q.id ? 'text-[#F2EBD9]' : 'text-[#8A9C94]'}`}>{q.text}</p>
+                                    <p className={`text-[13px] leading-relaxed ${activeQuestion === q.id ? 'text-foreground' : 'text-muted-foreground'}`}>{q.text}</p>
                                 </div>
                             </div>
                         ))}
@@ -75,15 +75,15 @@ export default function QuizEditPage() {
 
 
             {/* ── MOBILE QUESTION NAVIGATOR ── */}
-            <div className="lg:hidden w-full bg-[#0D1511] border-b border-[#1f3329] px-3 py-3">
-                <p className="text-[9px] font-bold tracking-[0.18em] uppercase text-[#8A9C94] mb-2 px-1">Quiz 101</p>
+            <div className="lg:hidden w-full bg-background border-b border-border px-3 py-3">
+                <p className="text-[9px] font-bold tracking-[0.18em] uppercase text-muted-foreground mb-2 px-1">Quiz 101</p>
 
                 <div className="flex items-center gap-2">
                     {/* Prev arrow */}
                     <button
                         onClick={goToPrev}
                         disabled={activeQuestion === 1}
-                        className="shrink-0 w-7 h-7 rounded-full border border-[#1f3329] bg-[#111C16] flex items-center justify-center text-[#8A9C94] disabled:opacity-30 hover:border-[#C69B35]/50 hover:text-[#C69B35] transition-colors"
+                        className="shrink-0 w-7 h-7 rounded-full border border-border bg-card flex items-center justify-center text-muted-foreground disabled:opacity-30 hover:border-primary/50 hover:text-primary transition-colors"
                     >
                         <ChevronLeft size={14} />
                     </button>
@@ -97,11 +97,11 @@ export default function QuizEditPage() {
                                     key={q.id}
                                     onClick={() => setActiveQuestion(q.id)}
                                     className={`shrink-0 flex items-center justify-center px-3 py-2 rounded-lg border transition-colors min-w-12 ${isActive
-                                        ? 'bg-[#111C16] border-[#C69B35]'
-                                        : 'border-[#1f3329] bg-[#111C16]/50 hover:border-[#C69B35]/30'
+                                        ? 'bg-card border-primary'
+                                        : 'border-border bg-card/50 hover:border-primary/30'
                                         }`}
                                 >
-                                    <span className={`text-[11px] font-bold font-serif italic ${isActive ? 'text-[#C69B35]' : 'text-[#8A9C94]'}`}>
+                                    <span className={`text-[11px] font-bold font-serif italic ${isActive ? 'text-primary' : 'text-muted-foreground'}`}>
                                         {q.number}
                                     </span>
                                 </button>
@@ -113,7 +113,7 @@ export default function QuizEditPage() {
                     <button
                         onClick={goToNext}
                         disabled={activeQuestion === questions.length}
-                        className="shrink-0 w-7 h-7 rounded-full border border-[#1f3329] bg-[#111C16] flex items-center justify-center text-[#8A9C94] disabled:opacity-30 hover:border-[#C69B35]/50 hover:text-[#C69B35] transition-colors"
+                        className="shrink-0 w-7 h-7 rounded-full border border-border bg-card flex items-center justify-center text-muted-foreground disabled:opacity-30 hover:border-primary/50 hover:text-primary transition-colors"
                     >
                         <ChevronRight size={14} />
                     </button>
@@ -122,29 +122,29 @@ export default function QuizEditPage() {
 
 
             {/* ── MAIN EDITOR ── */}
-            <main className="flex-1 bg-[#0a100d] flex flex-col items-center py-6 sm:py-10 px-4 min-h-[calc(100vh-89px)] pb-28 sm:pb-36 relative">
+            <main className="flex-1 bg-background flex flex-col items-center py-6 sm:py-10 px-4 min-h-[calc(100vh-89px)] pb-28 sm:pb-36 relative">
 
-                <div className="w-full max-w-3xl bg-[#111C16] border border-[#1f3329] rounded-2xl p-5 sm:p-8 md:p-12 shadow-2xl flex flex-col relative z-0 mt-4 sm:mt-8 mb-8 sm:mb-12">
-                    <span className="text-[#C69B35] text-[11px] font-bold tracking-[0.2em] uppercase mb-6 sm:mb-10">
+                <div className="w-full max-w-3xl bg-card border border-border rounded-2xl p-5 sm:p-8 md:p-12 shadow-2xl flex flex-col relative z-0 mt-4 sm:mt-8 mb-8 sm:mb-12">
+                    <span className="text-primary text-[11px] font-bold tracking-[0.2em] uppercase mb-6 sm:mb-10">
                         Question {String(activeQuestion).padStart(2, "0")}
                     </span>
                     <textarea
-                        className="w-full bg-transparent text-lg sm:text-2xl lg:text-3xl font-serif text-[#F2EBD9] border-none outline-none resize-none min-h-20 sm:min-h-25 mb-6 sm:mb-8 placeholder:text-[#8A9C94]/50 leading-relaxed selection:bg-[#C69B35]/30 focus:ring-0"
+                        className="w-full bg-transparent text-lg sm:text-2xl lg:text-3xl font-serif text-foreground border-none outline-none resize-none min-h-20 sm:min-h-25 mb-6 sm:mb-8 placeholder:text-muted-foreground/50 leading-relaxed selection:bg-primary/30 focus:ring-0"
                         value={questionText}
                         onChange={(e) => setQuestionText(e.target.value)}
                     />
 
                     <div className="flex flex-col gap-3 sm:gap-4">
                         {options.map((opt, idx) => (
-                            <div key={idx} className={`flex items-center gap-3 sm:gap-4 p-3 sm:p-5 rounded-xl border transition-colors ${correctIndex === idx ? 'border-[#3bb97e]/40 bg-[#3bb97e]/5' : 'border-[#1f3329] hover:border-[#C69B35]/30 bg-[#0D1511]'}`}>
+                            <div key={idx} className={`flex items-center gap-3 sm:gap-4 p-3 sm:p-5 rounded-xl border transition-colors ${correctIndex === idx ? 'border-[#3bb97e]/40 bg-[#3bb97e]/5' : 'border-border hover:border-primary/30 bg-background'}`}>
                                 <div
-                                    className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center shrink-0 cursor-pointer transition-colors ${correctIndex === idx ? 'bg-[#3bb97e] shadow-[0_0_10px_rgba(59,185,126,0.3)]' : 'border border-[#1f3329] hover:border-[#C69B35]/50'}`}
+                                    className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center shrink-0 cursor-pointer transition-colors ${correctIndex === idx ? 'bg-[#3bb97e] shadow-[0_0_10px_rgba(59,185,126,0.3)]' : 'border border-border hover:border-primary/50'}`}
                                     onClick={() => setCorrectIndex(idx)}
                                 >
-                                    {correctIndex === idx && <Check size={12} className="text-[#0D1511]" strokeWidth={4} />}
+                                    {correctIndex === idx && <Check size={12} className="text-background" strokeWidth={4} />}
                                 </div>
                                 <input
-                                    className={`flex-1 bg-transparent border-none text-[14px] sm:text-[15px] outline-none pt-0.5 transition-colors ${correctIndex === idx ? 'text-[#F2EBD9] selection:bg-[#3bb97e]/30' : 'text-[#8A9C94] selection:bg-[#C69B35]/30 focus:text-[#F2EBD9]'}`}
+                                    className={`flex-1 bg-transparent border-none text-[14px] sm:text-[15px] outline-none pt-0.5 transition-colors ${correctIndex === idx ? 'text-foreground selection:bg-[#3bb97e]/30' : 'text-muted-foreground selection:bg-primary/30 focus:text-foreground'}`}
                                     value={opt}
                                     onChange={(e) => handleOptionChange(idx, e.target.value)}
                                 />
@@ -152,11 +152,11 @@ export default function QuizEditPage() {
                         ))}
                     </div>
 
-                    <div className="mt-10 sm:mt-16 pt-5 sm:pt-6 border-t border-[#1f3329] flex items-center justify-between">
-                        <button className="flex items-center gap-2 text-[#8A9C94] hover:text-[#D87070] transition-colors text-[10px] font-bold tracking-widest uppercase">
+                    <div className="mt-10 sm:mt-16 pt-5 sm:pt-6 border-t border-border flex items-center justify-between">
+                        <button className="flex items-center gap-2 text-muted-foreground hover:text-[#D87070] transition-colors text-[10px] font-bold tracking-widest uppercase">
                             <Trash2 size={15} /> Delete
                         </button>
-                        <button className="text-[#C69B35] hover:text-[#daa834] transition-colors bg-[#C69B35]/10 p-2 rounded-md">
+                        <button className="text-primary hover:text-primary-hover transition-colors bg-primary/10 p-2 rounded-md">
                             <Sparkles size={17} />
                         </button>
                     </div>
@@ -169,17 +169,17 @@ export default function QuizEditPage() {
 
 
 
-            <div className="fixed bottom-0 left-0 right-0 w-full px-4 sm:px-6 md:px-12 py-3 sm:py-4 md:py-5 z-30 bg-[#0D1511]/95 backdrop-blur-md border-t border-[#1f3329] flex items-center justify-between gap-3">
+            <div className="fixed bottom-0 left-0 right-0 w-full px-4 sm:px-6 md:px-12 py-3 sm:py-4 md:py-5 z-30 bg-background/95 backdrop-blur-md border-t border-border flex items-center justify-between gap-3">
                 <div className="hidden lg:block w-87.5 shrink-0" />
 
                 {/* Mobile: question counter */}
-                <span className="lg:hidden text-[10px] font-bold text-[#8A9C94] uppercase tracking-widest shrink-0">
+                <span className="lg:hidden text-[10px] font-bold text-muted-foreground uppercase tracking-widest shrink-0">
                     {activeQuestion} / {questions.length}
                 </span>
 
                 <Link
                     to="/create/config"
-                    className="flex items-center gap-2 bg-[#B28228] hover:bg-[#C69B35] text-[#0D1511] font-bold uppercase rounded-sm transition-all shadow-lg active:scale-95 ml-auto whitespace-nowrap
+                    className="flex items-center gap-2 bg-primary hover:bg-primary text-background font-bold uppercase rounded-sm transition-all shadow-lg active:scale-95 ml-auto whitespace-nowrap
             text-[9px] tracking-[0.08em] px-4 py-2.5
             sm:text-[10px] sm:tracking-[0.12em] sm:px-6 sm:py-3
             md:text-[11px] md:tracking-[0.15em] md:px-8 md:py-3.5"
