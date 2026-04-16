@@ -10,6 +10,8 @@ import StatsPage from "./pages/StatsPage"
 import DashboardPage from "./pages/DashboardPage"
 import QuizConfigPage from "./pages/QuizConfigPage"
 import QuizEditPage from "./pages/QuizEditPage"
+import CreaterLayout from "./layouts/CreaterLayout"
+import UploadPage from "./pages/UploadPage"
 
 
 
@@ -25,10 +27,18 @@ function App() {
 
         <Route path="/quiz/:id" element={<QuizViewPage />} />
         <Route path="/quiz/:id/results" element={<ResultPage />} />
-        <Route path="/share/:id" element={<ShareLinkPage />} />
 
-        <Route path="/config" element={<QuizConfigPage/>}/>
-        <Route path="/edit" element={<QuizEditPage />} />
+
+
+        <Route path="/create" element={<CreaterLayout />} >
+
+        <Route path="upload" element={<UploadPage />} />
+        <Route path="share" element={<ShareLinkPage />} />
+        <Route path="config" element={<QuizConfigPage/>}/>
+        <Route path="edit" element={<QuizEditPage />} />
+
+        </Route>
+
 
 
 

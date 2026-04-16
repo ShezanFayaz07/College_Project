@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { QRCodeSVG } from "qrcode.react";
 
 export default function ShareModal() {
-  const shareUrl = "https://quizly.app/q/scholar-123";
+  const shareUrl = "https://quizly.app/q/50%-123";
 
   return (
     <div className="w-full max-w-2xl flex flex-col items-center gap-6 sm:gap-8">

@@ -33,7 +33,7 @@ export default function DashboardPage() {
 
                 <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-6">
                     <div>
-                        <h1 className="text-4xl md:text-5xl font-serif text-foreground mb-3">Your Manuscripts</h1>
+                        <h1 className="text-4xl md:text-5xl font-serif text-foreground mb-3">Your Quizzes</h1>
                         <p className="text-muted-foreground text-sm md:text-base">Manage and distribute your generated quiz collections.</p>
                     </div>
 

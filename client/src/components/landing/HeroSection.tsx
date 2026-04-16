@@ -14,7 +14,7 @@ export default function HeroSection() {
           seconds
         </h1>
         <p className="text-muted-foreground text-sm md:text-base max-w-md leading-relaxed">
-          The AI-powered manuscript scribe that extracts wisdom from your files and transforms them into interactive learning experiences.
+          Upload any document and get a ready-to-share quiz in seconds. No manual question writing needed.
         </p>
         <Link
           to="/create/upload"

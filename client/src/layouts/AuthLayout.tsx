@@ -26,7 +26,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
                     <ul className="space-y-6">
                         {[
                             "AI-powered extraction from any manuscript",
-                            "Instant shareable links for scholars",
+                            "Instant shareable links for 50%s",
                             "Beautiful quiz themes tailored for focus"
                         ].map((feature, idx) => (
                             <li key={idx} className="flex items-center gap-4 text-sm text-muted-foreground font-medium">

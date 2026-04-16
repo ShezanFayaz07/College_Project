@@ -82,7 +82,7 @@ export default function QuizConfigPage() {
           ${isTimerEnabled ? "border-border" : "border-border/50 opacity-80"}`}>
                     <div className="flex items-start justify-between mb-8">
                         <div>
-                            <h2 className="text-lg font-serif italic text-foreground mb-1">Time Constraints</h2>
+                            <h2 className="text-lg font-serif italic text-foreground mb-1">Quiz Timer</h2>
                             <p className="text-muted-foreground text-[13px]">Enable or disable the global quiz timer</p>
                         </div>
                         <button
@@ -147,12 +147,12 @@ export default function QuizConfigPage() {
                 {/* Passing Score */}
                 <div className="w-full bg-card/40 backdrop-blur-sm border border-border rounded-xl p-8 shadow-xl transition-all duration-300">
                     <div className="flex items-center justify-between mb-2">
-                        <h2 className="text-lg font-serif italic text-foreground">Academic Standard</h2>
+                        <h2 className="text-lg font-serif italic text-foreground">Passing Score</h2>
                         <div className="text-primary text-xs font-bold uppercase tracking-widest px-3 py-1.5 bg-primary/5 rounded-md border border-primary/20">
                             {passingScore}% Required
                         </div>
                     </div>
-                    <p className="text-muted-foreground text-[13px] mb-8">Define the minimum threshold to pass this manuscript</p>
+                    <p className="text-muted-foreground text-[13px] mb-8">Set the minimum score a student needs to pass.</p>
 
                     <div className="relative pt-6 pb-2 cursor-pointer group">
                         <input
@@ -168,9 +168,9 @@ export default function QuizConfigPage() {
                             }}
                         />
                         <div className="flex justify-between w-full mt-4 text-muted-foreground text-[10px] font-bold uppercase tracking-widest opacity-40">
-                            <span>Novice (0%)</span>
-                            <span>Scholar (50%)</span>
-                            <span>Master (100%)</span>
+                            <span>0% (0%)</span>
+                            <span>50% (50%)</span>
+                            <span>100% (100%)</span>
                         </div>
                     </div>
                 </div>
@@ -179,7 +179,7 @@ export default function QuizConfigPage() {
                 <div className="w-full bg-card/40 backdrop-blur-sm border border-border rounded-xl p-8 shadow-xl transition-all duration-300">
                     <h2 className="text-lg font-serif italic text-foreground mb-8 flex items-center gap-2">
                         <span className="w-6 h-px bg-primary"></span>
-                        Manuscript Details
+                        Quiz Details
                     </h2>
 
                     <div className="flex flex-col gap-3">
@@ -207,7 +207,7 @@ export default function QuizConfigPage() {
             sm:text-[10px] sm:tracking-widest sm:px-6 sm:py-3
             md:text-[11px] md:tracking-[0.15em] md:px-8 md:py-3.5"
         >
-          Publish Manuscript
+          Publish Quiz
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="sm:w-4 sm:h-4 md:w-4.5 md:h-4.5"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
         </Link>
       </div>
