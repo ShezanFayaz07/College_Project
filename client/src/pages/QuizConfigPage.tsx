@@ -21,7 +21,7 @@ export default function QuizConfigPage() {
         <div className="flex-1 w-full bg-background flex flex-col items-center pt-10 pb-36 overflow-y-auto px-4 z-0 font-sans">
             <div className="w-full max-w-3xl mb-12 text-center md:text-left transition-all duration-300">
                 <h1 className="text-3xl md:text-4xl font-serif text-foreground mb-4">Configure your <span className="italic px-1">Quiz</span></h1>
-                <p className="text-muted-foreground text-[15px]">Set your rules and branding before publishing your manuscript.</p>
+                <p className="text-muted-foreground text-[15px]">Set your quiz rules and preferences before publishing.</p>
             </div>
 
             <div className="w-full max-w-3xl flex flex-col gap-6">
@@ -183,7 +183,7 @@ export default function QuizConfigPage() {
                     </h2>
 
                     <div className="flex flex-col gap-3">
-                        <label className="text-[10px] font-bold tracking-widest text-muted-foreground uppercase pl-1">Manuscript Title</label>
+                        <label className="text-[10px] font-bold tracking-widest text-muted-foreground uppercase pl-1">Quiz Title</label>
                         <input
                             value={quizTitle}
                             onChange={(e) => setQuizTitle(e.target.value)}
