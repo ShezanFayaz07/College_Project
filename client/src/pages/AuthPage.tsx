@@ -15,7 +15,7 @@ export default function () {
 
                     <Link
                         to="/login"
-                        className={`pb-3 text-sm font-bold tracking-widest ${isLogin ? 'text-primary border-b-[3px] border-primary' : 'text-[#A19D92] hover:text-[#1C2321] transition-colors border-b-[3px] border-transparent'}`}
+                        className={`pb-3 text-sm font-bold tracking-widest ${isLogin ? 'text-primary border-b-[3px] border-primary' : 'text-[#A19D92] hover:text-card-foreground transition-colors border-b-[3px] border-transparent'}`}
                     >
                         Log in
                     </Link>
@@ -23,7 +23,7 @@ export default function () {
 
                     <Link
                         to="/register"
-                        className={`pb-3 text-sm font-bold tracking-widest ${!isLogin ? 'text-primary border-b-[3px] border-primary' : 'text-[#A19D92] hover:text-[#1C2321] transition-colors border-b-[3px] border-transparent'}`}
+                        className={`pb-3 text-sm font-bold tracking-widest ${!isLogin ? 'text-primary border-b-[3px] border-primary' : 'text-[#A19D92] hover:text-card-foreground transition-colors border-b-[3px] border-transparent'}`}
                     >
                         Register
                     </Link>
