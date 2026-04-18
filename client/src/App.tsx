@@ -12,10 +12,21 @@ import QuizConfigPage from "./pages/QuizConfigPage"
 import QuizEditPage from "./pages/QuizEditPage"
 import CreaterLayout from "./layouts/CreaterLayout"
 import UploadPage from "./pages/UploadPage"
+import { useEffect } from "react"
 
 
 
 function App() {
+
+
+    useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    if (savedTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
 
   return (
     <>
