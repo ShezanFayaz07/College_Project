@@ -60,7 +60,7 @@ A full-stack application that generates quizzes using AI.
    npm install
    ```
 3. Create a `.env` file in the `server` directory and add your environment variables:
-   ```
+
 4. Start the server:
    ```bash
    npm run dev
