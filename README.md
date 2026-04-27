@@ -9,4 +9,23 @@ A full-stack application that generates quizzes using AI.
 
 ---
 
+## 🛠️ Tech Stack
 
+**Frontend:**
+- React
+- TypeScript
+- Tailwind CSS
+- Lucide React (for icons)
+
+**Backend:**
+- Node.js
+- Express
+- MongoDB (Mongoose)
+- JSON Web Token (JWT) for Authentication
+- Bcrypt for Password Hashing
+
+---
+
+## 📝 License
+
+This project is for educational purposes.
