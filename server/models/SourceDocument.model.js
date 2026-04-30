@@ -1,0 +1,81 @@
+import mongoose, { Schema } from "mongoose";
+
+const sourceDocumentSchema = new Schema({
+    creatorId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true
+    },
+    sourceType: {
+        type: String,
+        enum: ["file", "text"],
+        required: true
+    },
+    originalName: {
+        type: String,
+        default: "",
+        trim: true
+    },
+    mimeType: {
+        type: String,
+        default: ""
+    },
+    extension: {
+        type: String,
+        enum: ["pdf", "docx", "txt", ""],
+        default: ""
+    },
+    sizeBytes: {
+        type: Number,
+        default: 0
+    },
+    storageProvider: {
+        type: String,
+        enum: ["local", "s3", "cloudinary", "none"],
+        default: "none"
+    },
+    storageKey: {
+        type: String,
+        default: ""
+    },
+    fileUrl: {
+        type: String,
+        default: ""
+    },
+    extractedText: {
+        type: String,
+        default: ""
+    },
+    cleanedText: {
+        type: String,
+        default: ""
+    },
+    wordCount: {
+        type: Number,
+        default: 0
+    },
+    characterCount: {
+        type: Number,
+        default: 0
+    },
+    checkSum: {
+        type: String,
+        default: ""
+    },
+    status: {
+        type: String,
+        enum: ["uploaded", "parsing", "ready", "failed"],
+        default: "uploaded"
+    },
+    parseError: {
+        type: String,
+        default: ""
+    },
+    parsedAt: {
+        type: Date
+    }
+},
+    {timestamps: true}
+);
+
+export default mongoose.model('SourceDocument', sourceDocumentSchema);
