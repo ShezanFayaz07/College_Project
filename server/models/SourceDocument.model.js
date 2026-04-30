@@ -18,6 +18,7 @@ const sourceDocumentSchema = new Schema({
     },
     mimeType: {
         type: String,
+        match: [/^[\w.-]+\/[\w.+-]+$/, "Invalid MIME type"],
         default: ""
     },
     extension: {
@@ -58,9 +59,9 @@ const sourceDocumentSchema = new Schema({
         type: Number,
         default: 0
     },
-    checkSum: {
+    checksum: {
         type: String,
-        default: ""
+        default: "",
     },
     status: {
         type: String,
@@ -77,5 +78,10 @@ const sourceDocumentSchema = new Schema({
 },
     {timestamps: true}
 );
+
+
+sourceDocumentSchema.index({ creatorId: 1, createdAt: -1 });
+sourceDocumentSchema.index({ checksum: 1 });
+sourceDocumentSchema.index({ status: 1 });
 
 export default mongoose.model('SourceDocument', sourceDocumentSchema);
