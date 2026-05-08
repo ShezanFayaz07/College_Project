@@ -1,7 +1,6 @@
 import User from '../models/User.model.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { use } from 'react';
 
 export const generateToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET || 'mysecretkey123', {
