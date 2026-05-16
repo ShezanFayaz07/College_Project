@@ -1,11 +1,12 @@
-import pdfParse from 'pdf-parse';
+import { PDFParse } from 'pdf-parse';
 import mammoth from 'mammoth';
-import SourceDocument from '../models/SourceDocument.js';
+import SourceDocument from '../models/SourceDocument.model.js';
 
 export const extractTextFromFile = async (file) => {
     try {
         if (file.mimetype === 'application/pdf') {
-            const data = await pdfParse(file.buffer);
+            const parser = new PDFParse({ data: file.buffer });
+            const data = await parser.getText();
             return data.text;
         }
         else if (file.mimetype === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
