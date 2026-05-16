@@ -1,15 +1,15 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import AiGeneration from '../models/AiGeneration.js';
-import SourceDocument from '../models/SourceDocument.js';
+import AiGeneration from '../models/AiGeneration.model.js';
+import SourceDocument from '../models/SourceDocument.model.js';
 
-export const generateQuizQuestions = async ({ userId, SourceDocumentId, questionCount = 10, difficulty = 'medium' }) => {
-    const sourceDoc = await SourceDocument.findbyId(SourceDocumentId);
+export const generateQuizQuestions = async ({ userId, sourceDocumentId, questionCount = 10, difficulty = 'medium' }) => {
+    const sourceDoc = await SourceDocument.findById(sourceDocumentId);
     if (!sourceDoc) {
         throw new Error('Source document not found');
     }
 
-    if (sourceDoc.userId.toString() !== userId.toString()) {
-        throw new Error("Unauthorized to access the document");
+    if (sourceDoc.creatorId.toString() !== userId.toString()) {
+        throw new Error("Unauthorized to access this document");
     }
 
     const textToAnalyze = sourceDoc.cleanedText || sourceDoc.extractedText;
@@ -19,10 +19,10 @@ export const generateQuizQuestions = async ({ userId, SourceDocumentId, question
     }
 
     // Initalize the Google Generative AI client
-    const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
     const model = genAI.getGenerativeModel({
-        model: 'gemini-1.5-flash',
+        model: 'gemini-2.5-flash',
         generationConfig: {
             responseMimeType: 'application/json',
         }
@@ -57,7 +57,7 @@ export const generateQuizQuestions = async ({ userId, SourceDocumentId, question
         creatorId: userId,
         sourceDocumentId: sourceDoc._id,
         provider: 'gemini',
-        model: 'gemini-1.5-flash',
+        model: 'gemini-2.5-flash',
         request: {
             questionCount,
             difficulty

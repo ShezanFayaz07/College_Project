@@ -1,5 +1,5 @@
 import express from 'express';
-import { generateQuestions } from '../controllers/aiController';
+import { generateQuestions } from '../controllers/aiController.js';
 import { protect } from '../middleware/auth.js'
 
 const router = express.Router();

@@ -10,7 +10,6 @@ export const register = async (req, res) => {
 
         const userDate = await authService.registerUser({ name, email, password });
         res.status(201).json(userDate);
-        console.log("User registered successfully:", userDate);
 
     } catch (error) {
         console.error("Register Error:", error.message);
@@ -33,7 +32,6 @@ export const login = async (req, res) => {
 
         const userData = await authService.loginUser({ email, password });
         res.status(200).json(userData);
-        console.log("User logged in successfully:", userData);
 
     } catch (error) {
         console.error("Login Error:", error.message);
