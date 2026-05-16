@@ -1,0 +1,40 @@
+import * as aiService from '../services/aiService.js';
+
+export const generateQuestions = async (req, res) => {
+    try {
+        const { sourceDocumentId, questionCount, difficulty } = req.body;
+
+        const userId = req.user._id;
+
+        if (!sourceDocumentId) {
+            return res.status(400).json({
+                message: "sourceDocumentId is required"
+            });
+        }
+        const safeCount = Math.min(Math.max(Number(questionCount) || 10, 1), 50);
+
+        const result = await aiService.generateQuizQuestions({
+            userId,
+            sourceDocumentId,
+            questionCount: safeCount,
+            difficulty: difficulty || 'medium'
+        });
+
+        res.status(200).json({
+            messsage: "Quiz Generated Successfully",
+            data:result
+        });
+
+
+    } catch (error) {
+        console.error("AI Generation Error:", error.message);
+        
+        // Map error to correct HTTP status
+        let statusCode = 400;
+        if (error.message.includes("Unauthorized")) statusCode = 403;
+        else if (error.message.includes("not found")) statusCode = 404;
+        else if (error.message.includes("AI Generation Failed")) statusCode = 502; // Bad Gateway
+
+        res.status(statusCode).json({ message: error.message || "Server error during AI generation" });
+    }
+};
